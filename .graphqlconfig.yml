@@ -1,0 +1,16 @@
+projects:
+  amzonclone:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/model
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3

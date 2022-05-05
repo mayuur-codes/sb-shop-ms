@@ -1,0 +1,54 @@
+type Product @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  title: String!
+  description: String!
+  image: String!
+  images: [String!]!
+  options: [String!]
+
+  avgRating: Float
+  ratings: Int
+
+  price: Float!
+
+ 
+}
+
+type CartProduct @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  userSub: String!
+  quantity: Int!
+  options: String
+
+
+  productID: ID!
+  product: Product @hasOne(fields: ["productID"])
+}
+
+type OrderProduct @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  quantity: Int!
+  options: String
+  
+
+
+  productID: ID!
+  product: Product @hasOne(fields: ["productID"])
+
+  orderID: ID!
+  order: Order @hasOne(fields: ["orderID"])
+
+  }
+
+  type Order @model @auth(rules: [{ allow: public }]) {
+    id: ID!
+    userSub: String!
+
+    fullName: String!
+    phoneNumber: String
+    country: String
+    city: String
+    address: String
+   
+  }
+ 

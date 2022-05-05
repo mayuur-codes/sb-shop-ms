@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "amzonclone",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "M:\\HardWork\\SB\\sbshopsrn-master\\amplify\\backend\\api\\amzonclone\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-04-28T05:04:42.576Z",
+      "keyDescription": "api key amazon"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "additionalAuthTypes": []
+  }
+}
